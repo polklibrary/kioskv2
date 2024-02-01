@@ -1,0 +1,242 @@
+html {
+    padding: 0px;
+    margin: 0;
+    position: relative;
+    font-family: Trebuchet MS;
+    overflow: hidden; 
+    touch-action:none;
+}
+
+body {
+    color: #ddd;
+    padding: 40px;
+    margin: 0;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+body * {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */      
+}
+
+.clear { clear: both; }
+.hide { display: none; }
+
+.backdrop {
+    background-image: url('../images/backdrops/back0.jpg');
+    bottom: 0;
+    filter: brightness(0.33) contrast(100%);
+    height: 1080px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 1920px;
+    z-index: 0;
+}
+
+.column-left{
+    float: left;
+    height: 1000px;
+    position: relative;
+    width: 250px;
+    z-index: 1;
+}
+
+
+.column-right{
+    border-radius: 25px;
+    float: left;
+    height: 1000px;
+    margin: 0 0 0 40px;
+    position: relative;
+
+    width: 1530px;
+    z-index: 1;
+}
+
+
+
+.icon{
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+}
+.icon-studyrooms {
+    background-image: url('../images/icons/studyrooms.png');
+}
+.icon-computers {
+    background-image: url('../images/icons/computers.png');
+}
+.icon-hours {
+    background-image: url('../images/icons/hours.png');
+}
+.icon-directions {
+    background-image: url('../images/icons/directions.png');
+}
+.icon-games {
+    background-image: url('../images/icons/games.png');
+}
+
+
+.button {
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    height: 125px;
+    margin: 25px auto;
+    padding: 20px;
+    position: relative;
+    width: 125px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+body[data-color="blue"] .button, body[data-color="blue"] .column-right  {
+    background-color: rgba(0, 114,188,0.7);
+    color: #ddd;
+}
+
+body[data-color="gold"] .button, body[data-color="gold"] .column-right  {
+    background-color: rgba(173, 157, 0, 0.7);
+    color: #ddd;
+}
+
+body[data-color="red"] .button, body[data-color="red"] .column-right {
+    background-color: rgba(165, 54, 54, 0.7);
+    color: #ddd;
+}
+
+body[data-color="green"] .button, body[data-color="green"] .column-right {
+    background-color: rgba(69, 152, 71, 0.7);
+    color: #ddd;
+
+}
+
+@keyframes flipper {
+  from { transform: rotateY(180deg);  }
+  to { transform: rotateY(360deg); }
+}
+
+
+body[data-color] .button.selected {
+    animation: flipper 333ms linear;
+    background-color: rgba(220, 220, 220, 0.7); 
+    color: #222;
+    transition: background-color linear 333ms;
+}
+body[data-color]  .button.selected .icon{
+    filter: invert(100%);
+}
+
+
+@keyframes fader {
+  from { opacity: 0;  }
+  to { opacity: 1; }
+}
+
+#content{
+}
+#content > div {
+    display: none;
+    /* bottom: 0; */
+    /* left: 0; */
+    /* position: absolute; */
+    /* right: 0; */
+    /* top: 0px; */
+    /* visibility: hidden; */
+    /* z-index: 0; */
+}
+#content > div.selected {
+    animation: fader 500ms linear;
+    display: block;
+    padding: 40px;
+    /* visibility: visible; */
+    /* z-index: 10; */
+}
+
+.content-left{
+    float: left;
+    width: 50%;
+}
+.content-right{
+    float: left;
+    width: 50%;
+}
+
+
+#advertisements {
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity linear 600ms;
+    z-index: 0;
+}
+
+.unavailable-warning {
+    font-size: 50px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.unavailable-warning-note {
+    font-size: 25px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#refresh-page {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

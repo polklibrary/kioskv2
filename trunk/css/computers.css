@@ -1,0 +1,160 @@
+
+#computers {
+    position: relative;
+}
+
+#computers > .btn {
+    background-color: #888;
+    border-radius: 10px;
+    background-clip: padding-box; 
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 15px 15px;
+    position: relative;
+    text-align: center;
+    width: 300px;
+}
+
+#computers > .btn.selected::after {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid rgba(200,200,200,0.5);
+    content: " ";
+    position: absolute;
+    right: -45px;
+    top: 26px;
+}
+
+#computers > .btn.plenty-available {
+    background-color: rgba(64,152,34,0.8);
+    border: 5px solid rgba(64,152,34,0.8);
+}
+#computers > .btn.limited-available {
+    background-color: rgba(152,34,34,0.8);
+    border: 5px solid rgba(152,34,34,0.8);
+}
+#computers > .btn.selected {
+    border: 5px solid rgba(200,200,200,0.5);
+}
+
+#computers .btn label {
+    color: #ddd;
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#computers .btn span.count {
+    color: #ddd;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#computers .btn span.total {
+    color: #bbb;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#computers .map {
+    border-radius: 25px;
+    bottom: 50px;
+    opacity: 0;
+    position: absolute;
+    left: 500px;
+    right: 50px;
+    top: 50px;
+    transform: translateY(-15px);
+    z-index: 0;
+}
+#computers .map.selected {
+    opacity: 1;
+    transition: opacity 500ms linear;
+    z-index: 100;
+}
+#computers .map img {
+    border-radius: 15px;
+    border: 10px solid rgba(200,200,200,0.5);
+    height: 100%;
+    opacity: 0.9;
+    position: relative;
+    z-index: 0;
+}
+
+
+
+#computers .map .computer {
+    border-radius: 25px;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    z-index: 2;
+}
+
+#computers .map .computer.small {
+    border-radius: 15px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    z-index: 2;
+}
+
+#computers .map .computer[data-available="1"]{
+    background-color: rgba(64,152,34,0.8);
+}
+
+#computers .map .computer[data-available="0"]{
+    background-color: rgba(152,34,34,0.8);
+}
+
+
+
+#computers.v2 .outer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+#computers.v2 .box {
+    background-color: rgba(64,152,34,0.8);
+    border: 5px solid rgba(200,200,200,0.5);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    height: 220px;
+    margin: 20px;
+    padding: 15px 15px;
+    position: relative;
+    text-align: center;
+    width: 500px;
+}
+
+
+#computers.v2 .info{
+    display:block;
+    text-align: left;
+}
+
+#computers.v2 .box label{
+    display: block;
+    font-size: 44px;
+    font-weight: bold;
+    font-style: italic;
+    width: 400px;
+    border-bottom: 5px solid rgba(200,200,200,0.7);
+}
+#computers.v2 .box span.total {
+    display:block;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+

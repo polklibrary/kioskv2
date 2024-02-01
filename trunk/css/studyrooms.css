@@ -1,0 +1,105 @@
+#studyrooms .schedule {
+    float: left;
+    padding: 100px 10px;
+    text-align: center;
+    width: 600px;
+}
+
+#studyrooms .schedule .size-huge { font-size: 50px; }
+#studyrooms .schedule .size-norm { font-size: 36px; }
+#studyrooms .schedule .size-small { font-size: 22px; }
+#studyrooms .schedule div { margin: 10px; }
+#studyrooms .schedule img { margin: 10px; width: 200px; }
+
+
+
+#studyrooms .rooms {
+    float: left;
+    overflow-y: scroll;
+    height: 910px;
+    width: 816px;
+}
+#studyrooms .rooms::-webkit-scrollbar  {
+    background-color: rgba(119, 139, 165, 0.85);
+    border-radius: 0 5px 5px 0;
+}
+
+#studyrooms .rooms::-webkit-scrollbar-button:increment {
+    background-color: rgba(195, 205, 218, 0.85);
+    background-image: url(../images/ScrollDown.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 0 0 5px 0;
+    
+}
+#studyrooms .rooms::-webkit-scrollbar-button:decrement {
+    background-color: rgba(195, 205, 218, 0.85);
+    background-image: url(../images/ScrollUp.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 0 5px 0 0;
+}
+
+
+#studyrooms .rooms::-webkit-scrollbar-thumb {
+    background-color: rgba(195, 205, 218, 0.85);
+    border-radius: 10px;
+}
+
+
+#studyrooms ul {
+    background-color: rgba(222,203,203,0.60);
+    border-left: 1px solid #555;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 159px;
+}
+
+#studyrooms ul:first-child {
+    border-left: none;
+}
+#studyrooms li {
+    list-style: none;
+    height: 20px;
+}
+#studyrooms li.timeline-current {
+    /* background-color: rgba(193, 20, 20, 0.5) !important; */
+    border-top: 2px solid rgba(193, 20, 20, 0.5);
+    position: relative;
+}
+
+#studyrooms li.room-label {
+    align-items: center;
+    background-color: rgba(50, 50, 50, 0.75);
+    font-weight: bold;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    position: fixed;
+    width: 159px;
+}
+/* #studyrooms ul:first-child li.room-label { */
+     /* border-radius: 15px 0 0 0; */
+/* } */
+
+#studyrooms li.group-event-start {
+    background-color: rgba(58, 158, 58, 0.7);
+    color: black;
+    font-weight: bold;
+    padding: 0px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#studyrooms li.coverage {
+    background-color: rgba(58, 158, 58, 0.7);
+}
+
+#studyrooms li.coverage:not(.group-event-start){
+    color: rgba(255,255,255,0.1);
+}

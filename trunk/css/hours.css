@@ -1,0 +1,47 @@
+.date {
+    background-color: rgba(222,203,203,0.60); 
+    border-bottom: 1px solid #555;
+    color: #ddd;
+    font-size: 40px;
+    font-weight: bold;    
+    padding: 18px 20px;
+    width: 95%;
+}
+.date:first-child {
+    border-radius: 10px 10px 0 0;
+}
+.date:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+
+.date .day {
+    color: #555;
+}
+.date .time {
+    margin: 0 50px;
+}
+
+#hours .pat-current-hour{
+    font-size: 100px;
+    padding: 10px 50px;
+    text-align: right;
+}
+
+@keyframes flashing {
+  0% { background-color: rgba(255, 0, 0, 0.7);  }
+  50% { background-color: rgba(255, 185, 0, 0.77); }
+  100% { background-color: rgba(255, 0, 0, 0.7); }
+}
+
+#hours .pat-closing-soon {
+    animation: flashing 2s linear infinite; 
+    background-color: rgba(255, 0, 0, 0.7);
+    display: none;
+    font-size: 120px;
+    padding: 20px;
+    margin: 0 10px 0 50px ;
+    border-radius: 10px;
+    text-align: center;
+    border: 5px solid #aaa;
+}

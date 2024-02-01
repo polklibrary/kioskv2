@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hours.css"/>
+		<link rel="stylesheet" type="text/css" href="css/studyrooms.css"/>
+		<link rel="stylesheet" type="text/css" href="css/directions.css"/>
+		<link rel="stylesheet" type="text/css" href="css/computers.css"/>
+		<link rel="stylesheet" type="text/css" href="css/games.css"/>
+        
+		<script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="scripts/hours.js"></script>
+		<script type="text/javascript" src="scripts/studyrooms.js"></script>
+		<script type="text/javascript" src="scripts/weather.js"></script>
+		<script type="text/javascript" src="scripts/computers.js"></script>
+		<script type="text/javascript" src="scripts/games.js"></script>
+		<script type="text/javascript" src="scripts/directions.js"></script>
+		<script type="text/javascript" src="scripts/kiosk.js"></script>
+        
+		<title>Polk Library Kiosk</title>
+	</head>
+    
+	<body data-color="blue">
+        
+        <div id="advertisements"></div>
+        <div class="backdrop"></div>
+            
+        <div id="navigation" class="column-left">
+        
+            <div class="button selected" data-kiosk="hours">
+                <div class="icon icon-hours"></div>
+                Hours
+            </div>
+            
+            <div class="button" data-kiosk="directions" data-initializer="Directions">
+                <div class="icon icon-directions"></div>
+                Directions
+            </div>
+            
+            <div class="button" data-kiosk="computers">
+                <div class="icon icon-computers"></div>
+                Computers
+            </div>
+            
+            <div class="button" data-kiosk="studyrooms" data-initializer="Groups">
+                <div class="icon icon-studyrooms"></div>
+                Study Rooms
+            </div>
+        
+            <div class="button" data-kiosk="games" data-initializer="Games" data-uninitializer="Games">
+                <div class="icon icon-games"></div>
+                Games
+            </div>
+        
+            <!-- <div class="button" data-kiosk="shuttle" data-initializer="Shuttle"> -->
+                <!-- <div class="icon icon-games"></div> -->
+                <!-- Shuttle -->
+            <!-- </div> -->
+        
+        </div>
+        
+        
+        <div id="content" class="column-right">
+            
+            <div id="hours" class="selected">
+                <div class="content-left"></div>
+                <div class="content-right">
+                    <div class="pat-current-hour"></div>
+                    <div class="pat-weather"></div>
+                    <!--<div class="pat-closing-soon">Closing Soon!</div>-->
+                </div>
+            </div>
+            
+            
+            <div id="directions">
+                <div class="clear separate">
+                    Walking Directions
+                </div>
+                
+                <div class="btn" data-mapping="AdminOffice">
+                    Administrative Office
+                </div>
+                <div class="btn" data-mapping="Archives">
+                    Archives &amp; ARC
+                </div>
+                <div class="btn" data-mapping="Circulation">
+                    Circulation
+                </div>
+                <div class="btn" data-mapping="EMC">
+                    Education Material Center
+                </div>
+                <div class="btn" data-mapping="Leisure">
+                    Leisure Reading
+                </div>
+                <div class="btn" data-mapping="Polk019">
+                    Polk 019-023
+                </div>
+                <div class="btn" data-mapping="Polk101">
+                    Polk 101
+                </div>
+                <div class="btn" data-mapping="Polk116a">
+                    Polk 116a
+                </div>
+                <div class="btn" data-mapping="Polk116b">
+                    Polk 116b
+                </div>
+                <div class="btn" data-mapping="Polk201f">
+                    Polk 201f
+                </div>
+                <div class="btn" data-mapping="Polk202">
+                    Polk 202
+                </div>
+                <div class="btn" data-mapping="TestingServices">
+                    Testing Services
+                </div>
+                <div class="btn" data-mapping="STC">
+                    Student Technology Center
+                </div>
+                
+                <div class="clear separate minor">
+                    Informational Maps
+                </div>
+                
+                <div class="btn minor" data-mapping="Basement">
+                    Basement
+                </div>
+                <div class="btn minor" data-mapping="FirstFloor">
+                    1st Floor
+                </div>
+                <div class="btn minor" data-mapping="SecondFloor">
+                    2nd Floor
+                </div>
+                <div class="btn minor" data-mapping="ThirdFloor">
+                    3rd Floor
+                </div>
+                    
+                <img class="map" data-map="ThirdFloor" src="images/directions/3rdFloorSimple.jpg" />
+                <img class="map" data-map="SecondFloor" src="images/directions/2ndFloorSimple.jpg" />
+                <img class="map" data-map="FirstFloor" src="images/directions/1stFloorSimple.jpg" />
+                <img class="map" data-map="Basement" src="images/directions/BasementSimple.jpg" />
+				
+                <img class="map all" data-map="ThirdFloorAll" src="images/directions/3rdFloorAll.jpg" />
+                <img class="map all" data-map="SecondFloorAll" src="images/directions/2ndFloorAll.jpg" />
+                <img class="map all" data-map="FirstFloorAll" src="images/directions/1stFloorAll.jpg" />
+                <img class="map all" data-map="BasementAll" src="images/directions/BasementAll.jpg" />
+                
+                <div class="tracks">
+                </div>
+			</div>
+			
+            
+            <div id="computers" class="v2">
+                <div class="outer-box">
+                    <div class="box">
+                        <label>Polk 101</label>
+                        <div class="info">
+                            <span class="total">37 PCs</span>
+                            <span class="total">&nbsp;&nbsp;6 Macs</span>
+                            <span class="total">&nbsp;&nbsp;4 Printers</span>
+                            <span class="total">&nbsp;&nbsp;1 Scanner</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label>EMC</label>
+                        <div class="info">
+                            <span class="total">4 PCs</span>
+                            <span class="total">2 Macs</span>
+                            <span class="total">1 Printer</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label>2nd Floor North</label>
+                        <div class="info">
+                            <span class="total">4 PCs</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label>2nd Floor South</label>
+                        <div class="info">
+                            <span class="total">2 PCs</span>
+                            <span class="total">1 Printer</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label>3rd Floor North</label>
+                        <div class="info">
+                            <span class="total">1 PC</span>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label>3rd Floor South</label>
+                        <div class="info">
+                            <span class="total">4 PCs</span>
+                            <span class="total">1 Printer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <!-- <div id="computers"> -->
+                <!-- <!--<div class="unavailable-warning">Computer availability is currently offline.</div> -->
+                <!-- <div class="unavailable-warning-note">We apologize for the inconvience.</div> --> 
+
+                <!-- <div class="btn" data-location="firstsouth" data-auto-select> -->
+                    <!-- <label>Polk 101</label> -->
+                    <!-- <span class="count"></span> -->
+                    <!-- <span class="total"></span> -->
+                <!-- </div> -->
+                <!-- <div class="btn" data-location="firstnorth"> -->
+                    <!-- <label>EMC</label> -->
+                    <!-- <span class="count"></span> -->
+                    <!-- <span class="total"></span> -->
+                <!-- </div> -->
+                <!-- <div class="btn" data-location="secondnorth"> -->
+                    <!-- <label>2nd Floor North</label> -->
+                    <!-- <span class="count"></span> -->
+                    <!-- <span class="total"></span> -->
+                <!-- </div> -->
+                <!-- <div class="btn" data-location="secondsouth"> -->
+                    <!-- <label>2nd Floor South</label> -->
+                    <!-- <span class="count"></span> -->
+                    <!-- <span class="total"></span> -->
+                <!-- </div> -->
+                <!-- <div class="btn" data-location="thirdnorth"> -->
+                    <!-- <label>3rd Floor North</label> -->
+                    <!-- <span class="count"></span> -->
+                    <!-- <span class="total"></span> -->
+                <!-- </div> -->
+                <!-- <div class="btn" data-location="thirdsouth"> -->
+                    <!-- <label>3rd Floor South</label> -->
+                    <!-- <span class="count"></span> -->
+                    <!-- <span class="total"></span> -->
+                <!-- </div> -->
+                
+                <!-- <div class="map" data-map="firstsouth" data-auto-select> -->
+                    <!-- <img src="images/computers/1stFloorSouth.jpg" /> -->
+                <!-- </div> -->
+                <!-- <div class="map" data-map="firstnorth"> -->
+                    <!-- <img src="images/computers/1stFloorNorth.jpg" /> -->
+                <!-- </div> -->
+                <!-- <div class="map" data-map="secondnorth"> -->
+                    <!-- <img src="images/computers/2ndFloorNorth.jpg" /> -->
+                <!-- </div> -->
+                <!-- <div class="map" data-map="secondsouth"> -->
+                    <!-- <img src="images/computers/2ndFloorSouth.jpg" /> -->
+                <!-- </div> -->
+                <!-- <div class="map" data-map="thirdnorth"> -->
+                    <!-- <img src="images/computers/3rdFloorNorth.jpg" /> -->
+                <!-- </div> -->
+                <!-- <div class="map" data-map="thirdsouth"> -->
+                    <!-- <img src="images/computers/3rdFloorSouth.jpg" /> -->
+                <!-- </div> -->
+                
+            <!-- </div> -->
+            
+            
+            <div id="studyrooms">
+                <div class="rooms"></div>
+                <div class="schedule">
+                    <div class="size-norm">Reserve a room by visiting the Circulation desk</div>
+                    <div class="size-huge">
+                        OR 
+                    </div>
+                    <div class="size-small">
+                         <span>Visit: uwosh.edu/go/rooms</span>
+                         <br />
+                         <br />
+                         <img src="images/QRCode.jpg" alt="QRCode" />
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            
+            <div id="games">
+                <iframe class="frogger" frameBorder="no" width="640" height="900"></iframe>
+                <div class="information"></div>
+            </div>
+            
+            <!-- <div id="shuttle"> -->
+                <!-- <img src="images/shuttle/CampusBusMap.jpg" /> -->
+                <!-- <div class="bus"></div> -->
+                
+                <!-- <div class="schedule"> -->
+                    <!-- <div class="trow"> -->
+                        <!-- <div class="tdata heading">Location</div> -->
+                        <!-- <div class="tdata heading">0 on the hour</div> -->
+                        <!-- <div class="tdata heading">20 on the hour</div> -->
+                        <!-- <div class="tdata heading">40 on the hour</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow lincoln"> -->
+                        <!-- <div class="tdata heading">Lincoln Hall</div> -->
+                        <!-- <div class="tdata h0">:04 - :06</div> -->
+                        <!-- <div class="tdata h20">:24 - :26</div> -->
+                        <!-- <div class="tdata h40">:44 - :46</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow albee"> -->
+                        <!-- <div class="tdata heading">Albee Hall</div> -->
+                        <!-- <div class="tdata h0">:05 - :07</div> -->
+                        <!-- <div class="tdata h20">:25 - :27</div> -->
+                        <!-- <div class="tdata h40">:45 - :47</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow fredric"> -->
+                        <!-- <div class="tdata heading">Fredric March</div> -->
+                        <!-- <div class="tdata h0">:06 - :08</div> -->
+                        <!-- <div class="tdata h20">:26 - :28</div> -->
+                        <!-- <div class="tdata h40">:46 - :48</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow lot35"> -->
+                        <!-- <div class="tdata heading">Lot 35</div> -->
+                        <!-- <div class="tdata h0">:08 - :10</div> -->
+                        <!-- <div class="tdata h20">:28 - :30</div> -->
+                        <!-- <div class="tdata h40">:48 - :50</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow woodland"> -->
+                        <!-- <div class="tdata heading">Woodland Ave.</div> -->
+                        <!-- <div class="tdata h0">:08 - :10</div> -->
+                        <!-- <div class="tdata h20">:28 - :30</div> -->
+                        <!-- <div class="tdata h40">:48 - :50</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow sage"> -->
+                        <!-- <div class="tdata heading">Sage Hall</div> -->
+                        <!-- <div class="tdata h0">:09 - :11</div> -->
+                        <!-- <div class="tdata h20">:29 - :31</div> -->
+                        <!-- <div class="tdata h40">:49 - :51</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow kolf"> -->
+                        <!-- <div class="tdata heading">Kolf</div> -->
+                        <!-- <div class="tdata h0">:09 - :11</div> -->
+                        <!-- <div class="tdata h20">:29 - :31</div> -->
+                        <!-- <div class="tdata h40">:49 - :51</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow gcc"> -->
+                        <!-- <div class="tdata heading">GCC/Ramp</div> -->
+                        <!-- <div class="tdata h0">:10 - :12</div> -->
+                        <!-- <div class="tdata h20">:30 - :32</div> -->
+                        <!-- <div class="tdata h40">:50 - :52</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow pearl"> -->
+                        <!-- <div class="tdata heading">Osceola/Pearl</div> -->
+                        <!-- <div class="tdata h0">:10 - :12</div> -->
+                        <!-- <div class="tdata h20">:30 - :32</div> -->
+                        <!-- <div class="tdata h40">:50 - :52</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow alumni"> -->
+                        <!-- <div class="tdata heading">Alumni Center</div> -->
+                        <!-- <div class="tdata h0">:11 - :13</div> -->
+                        <!-- <div class="tdata h20">:31 - :33</div> -->
+                        <!-- <div class="tdata h40">:51 - :53</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="trow services"> -->
+                        <!-- <div class="tdata heading">Campus Services</div> -->
+                        <!-- <div class="tdata h0">:14 - :19</div> -->
+                        <!-- <div class="tdata h20">:34 - :39</div> -->
+                        <!-- <div class="tdata h40">:54 - :59</div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                
+                <!-- <div class="schedule-warning"> -->
+                    <!-- All shuttle times are approximate.  Times and routes are subject to change where conditions merit. Map is a best guess and does not show bus in real-time. -->
+                <!-- </div> -->
+                
+            <!-- </div> -->
+           
+        </div>
+        
+        <a id="refresh-page" href="http://polk.uwosh.edu/kioskv2/trunk"></a>
+
+        
+	</body>
+</html>

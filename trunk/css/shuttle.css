@@ -1,0 +1,67 @@
+#shuttle {
+    position: relative;
+}
+
+#shuttle img {
+    border-radius: 15px;
+    border: 10px solid rgba(200,200,200,0.5);
+    width: 100%;
+}
+
+#shuttle div.bus {
+    background-image: url('../images/shuttle/bus.png');
+    background-size: 50px 50px;
+    background-repeat: none;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: transform 1ms linear;
+    transform: translate3d(1421px, 563px, 0);
+    width: 50px;
+}
+    
+#shuttle .schedule {
+    float: left;
+    margin-top: 10px;
+}
+
+#shuttle .schedule .trow {
+    background-color: rgba(222, 203, 203, 0.60); 
+    border-bottom: 1px solid #555;
+    height: 20px;
+    padding: 2px 10px;
+    width: 600px;
+}
+#shuttle .schedule .trow:first-child {
+    border-radius: 5px 5px 0px 0px;
+}
+#shuttle .schedule .trow:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+#shuttle .schedule .tdata {
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+#shuttle .schedule .tdata.heading {
+    color: #555;
+    font-weight: bold;
+    text-align: left;
+}
+
+#shuttle .schedule .tdata.active {
+    background-color: rgba(64,152,34,0.8); 
+}
+
+
+#shuttle .schedule-warning {
+    background-color: rgba(222, 203, 203, 0.60); 
+    border-radius: 5px;
+    font-size: 20px;
+    float: left;
+    margin: 10px 0 0 50px;
+    padding: 20px;
+    width: 600px;
+}

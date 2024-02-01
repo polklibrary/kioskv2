@@ -1,0 +1,20 @@
+
+#games iframe {
+    float: left;
+}
+
+#games .information {
+    float: left;
+    color: #333;
+    background-color: rgba(222,203,203,0.60);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 36px;
+    width: 700px;
+}
+
+#games .information div {
+    color: #ddd;
+    font-size: 50px;
+    padding-bottom: 10px;
+}

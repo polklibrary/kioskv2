@@ -1,0 +1,48 @@
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #000;
+    width: 480px;
+    height: 640px;
+    border-radius: 15px;
+    border: 10px solid rgba(200,200,200,0.5);
+}
+
+.frogger {
+    width: 480px;
+    margin: 0 auto;
+    position: relative
+}
+
+.frogger .gamepad {
+    background-color: rgba(222,203,203,0.60);
+    position: relative;
+    top: 680px;
+    width: 500px;
+    height: 200px;
+    border-radius: 100px;
+}
+.frogger .gamepad img {
+    width: 60px;
+}
+.frogger .gamepad .gp-up {
+    position: absolute;
+    left: 220px;
+    top: 20px;
+}
+.frogger .gamepad .gp-down {
+    position: absolute;
+    left: 220px;
+    top: 120px;
+}
+.frogger .gamepad .gp-left {
+    position: absolute;
+    left: 170px;
+    top: 70px;
+}
+.frogger .gamepad .gp-right {
+    position: absolute;
+    left: 270px;
+    top: 70px;
+}
